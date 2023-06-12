@@ -8,14 +8,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <!-- Add Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <!-- add Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div id="app">
-        <div id="app">{{ message }}</div>
+    <header>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-auto m-auto p-4">
+                    <h2 class="text-white">Genera La lista delle cose da fare</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+    <div class="container">
+            <div class="col-12">
+                <div class="container-fluid bg-info-subtle">
+                    <div class="p-3 d-flex justify-content-center ">
+                        <button class="btn btn-secondary" @click="caricaLista">Carica dati</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="col-12">
+                <div class="container-fluid bg-white p-3">
+                    <div class="d-flex flex-column">
+                        <ul class="list-unstyled" v-for="student in students">
+                            <li>{{ student.name }}: {{ student.description }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+  
     </div>
     
     <script src="main.js"></script>
