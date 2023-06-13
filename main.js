@@ -32,6 +32,12 @@ createApp({
             this.sendData(data);
 
         },
+        removeTask(i) {
+          const data = {
+              removeIndex: i
+          };
+          this.sendData(data);
+      },
         sendData(data) {
             //Faccio una chiamata POST ad apiUrl, passando il data
             axios.post(this.apiUrl, data, {

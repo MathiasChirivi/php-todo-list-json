@@ -19,7 +19,10 @@ if( isset($_POST['newTask']) ) {
     $changeIndex = $_POST['index'];
     $todoListDati[$changeIndex]['done'] = !$todoListDati[$changeIndex]['done'];
     file_put_contents("dati.json", json_encode($todoListDati) );
-
+} elseif (isset($_POST["removeIndex"])) {
+    $todosIndex = $_POST["removeIndex"];
+    array_splice($todoListDati, $todosIndex, 1);
+    file_put_contents("dati.json", json_encode($todoListDati));
 }
 
 $todoList = json_encode($todoListDati);
