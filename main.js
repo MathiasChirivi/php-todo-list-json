@@ -8,13 +8,11 @@ createApp({
     }
   },
     methods:{
-        caricaLista() {
-            axios.get(this.apiUrl).then((response) => {
-                this.students = response.data;
-            });
-        }
-  },
-  mounted(){
+      },
+      mounted(){
         console.log("App Caricata");
+        axios.get(this.apiUrl).then((response) => {
+            this.students = response.data;
+        });
   }
 }).mount('#app')

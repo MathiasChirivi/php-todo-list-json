@@ -28,7 +28,6 @@
             <div class="col-12">
                 <div class="container-fluid bg-info-subtle">
                     <div class="p-3 d-flex justify-content-center ">
-                        <button class="btn btn-secondary" @click="caricaLista">Carica dati</button>
                     </div>
                 </div>
             </div>
